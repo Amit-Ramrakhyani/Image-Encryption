@@ -17,7 +17,6 @@ class ImageDecryptor:
         array.pop()
 
         cols = rows = int(math.sqrt(len(array) / 3))
-        print(rows, cols)
         image_array = np.zeros((rows, cols, 3), dtype=np.uint8)
 
         array_index = 0
@@ -32,7 +31,6 @@ class ImageDecryptor:
                     image_array[row][col][color_channel] = array[array_index]
                     array_index += 1
 
-        print(image_array)
         image = Image.fromarray(image_array)
         image.save('decrypted_image.jpg')
 

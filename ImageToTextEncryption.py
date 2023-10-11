@@ -6,7 +6,7 @@ class ImageEncryptor:
     def __init__(self, key):
         self.key = key
 
-    def resize_image(self, image_path, width=5, height=5):
+    def resize_image(self, image_path, width=1000, height=1000):
         image = Image.open(image_path)
         resized_image = image.resize((width, height))
         resized_image.save('resized_image.jpg')
