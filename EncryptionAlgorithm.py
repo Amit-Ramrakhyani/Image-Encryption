@@ -2,7 +2,6 @@ import hashlib
 from Crypto import Random
 from Crypto.Cipher import AES
 from base64 import b64encode, b64decode
-# import ImageToTextEncryption as itte
 
 class AESCipher(object):
     
@@ -35,15 +34,4 @@ class AESCipher(object):
         cipher = AES.new(self.key, AES.MODE_CBC, iv)
         plain_text = cipher.decrypt(encrypted_text[self.block_size:]).decode("utf-8")
         return self.__unpad(plain_text)
-    
-# if __name__ == "__main__":
-#     aes = AESCipher('1f6332526198f90e0b21b831948772ce')
-    # text = itte.encryption('image1.jpg')
-    # print(text)
-    # encrypted = aes.encrypt(text)
-    # decrypted = aes.decrypt(encrypted)
-    # print("\n")
-    # print(encrypted)
-    # print("\n")
-    # print(decrypted)
     
