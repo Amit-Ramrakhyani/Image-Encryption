@@ -36,7 +36,7 @@ class ImageDecryptor:
 def main():
     key = '1f6332526198f90e0b21b831948772ce'
     
-    with open('encrypted_image.txt', 'r') as f:
+    with open('encrypted_text.txt', 'r') as f:
         cipher_text = f.read()
     
     decryptor = ImageDecryptor(key)
