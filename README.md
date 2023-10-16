@@ -40,10 +40,28 @@ pip install -r requirements.txt
 
 ## Executing the program
 
-- Use the following command in the command prompt to run the code:
+- Use the following command in the command prompt to *encrypt image to image*:
 
 ```
-python3 main.py
+python3 ImageToImageEncryption.py
+```
+
+- Use the following command in the command prompt to *encrypt image to text*:
+
+```
+python3 ImageToTextEncryption.py
+```
+
+- Use the following command in the command prompt to *decrypt text to image*:
+
+```
+python3 TextToImageEncryption.py
+```
+
+- Use the following command in the command prompt to *decrypt image to image*:
+
+```
+python3 ImageToImageDecryption.py
 ```
 
 # Basic Flow
@@ -52,6 +70,11 @@ python3 main.py
 
 # Future Scopes and updates
 
+- Need to design frontend.
+- Add new features like videos to text, text to audio, image to audio, text to image, etc
+
 
 
 # Current Issues
+
+- Not getting the required output from Encryption and Decryption from image to image.
