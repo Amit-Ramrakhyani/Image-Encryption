@@ -1,8 +1,7 @@
 import numpy as np
 from PIL import Image
-from EncryptionAlgorithm import AESCipher
+from EncryptionDecryptionAlgorithm import AESCipher
 import math
-import ImageToTextEncryption as itte
 
 class ImageDecryptor:
     def __init__(self, key):
@@ -32,12 +31,13 @@ class ImageDecryptor:
                     array_index += 1
 
         image = Image.fromarray(image_array)
-        image.save('decrypted_image.jpg')
+        image.save('decrypted_image_from_text.jpg')
 
 def main():
     key = '1f6332526198f90e0b21b831948772ce'
-    encryptor = itte.ImageEncryptor(key)
-    cipher_text = itte.main()
+    
+    with open('encrypted_image.txt', 'r') as f:
+        cipher_text = f.read()
     
     decryptor = ImageDecryptor(key)
     decryptor.decrypt_image(cipher_text)

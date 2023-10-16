@@ -1,13 +1,15 @@
 import numpy as np
 from PIL import Image
-from EncryptionAlgorithm import AESCipher
+from EncryptionDecryptionAlgorithm import AESCipher
 
 class ImageEncryptor:
     def __init__(self, key):
         self.key = key
 
-    def resize_image(self, image_path, width=1000, height=1000):
+    def resize_image(self, image_path, width=256, height=256):
         image = Image.open(image_path)
+        width_, height_ = image.size
+        print(width_, height_)
         resized_image = image.resize((width, height))
         resized_image.save('resized_image.jpg')
         return 'resized_image.jpg'
@@ -17,7 +19,7 @@ class ImageEncryptor:
         image = Image.open(resized_image_path)
         image_array = np.array(image)
 
-        rows = cols = len(image_array[:, :, 0])
+        rows, cols = image_array.shape[0], image_array.shape[1]
         array = []
         text = ""
 
@@ -38,4 +40,8 @@ def main():
     key = '1f6332526198f90e0b21b831948772ce'
     encryptor = ImageEncryptor(key)
     encrypted_image = encryptor.encrypt_image('image1.jpg')
-    return encrypted_image
+    with open('encrypted_image.txt', 'w') as f:
+        f.write(encrypted_image)
+
+if __name__ == "__main__":
+    main()
