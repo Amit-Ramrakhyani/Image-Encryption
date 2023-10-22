@@ -80,3 +80,57 @@ class ArnoldCat:
             img = self.ArnoldCatTransform(img, i)
             
         return img
+    
+class LogisticMap:
+    def __init__(self, seed):
+        self.seed = seed
+    
+    def logistic_map(self, x, r):
+        return r * x * (1 - x)
+    
+    def generate_key(self, n):
+        key_array = [0] * n
+        x = self.seed
+        r = 3.6 # Can change the parameter 'r' for different chaotic behavior
+        for i in range(n):
+            x = self.logistic_map(x, r)  
+            key_array[i] = int(x * 255)  # Scale to 0-255
+
+        return key_array
+            
+    def encrypt_image(self, input_image_path, key):
+        image = Image.open(input_image_path)
+        image_array = np.array(image)
+        
+        if len(key) < image_array.size:
+            raise ValueError("Key size is too small for the image size.")
+
+        encrypted_image = image_array.copy()
+        height, width, channels = image_array.shape
+
+        for i in range(height):
+            for j in range(width):
+                for channel in range(channels):
+                    pixel_value = encrypted_image[i, j, channel]
+                    encrypted_pixel = pixel_value ^ int(key[i * width + j])
+                    encrypted_image[i, j, channel] = int(encrypted_pixel)
+
+        encrypted_image = Image.fromarray(encrypted_image)
+        return encrypted_image
+        
+    def decrypt_image(self, encrypted_image_path, key):
+        encrypted_image = Image.open(encrypted_image_path)
+        encrypted_image_array = np.array(encrypted_image)
+
+        decrypted_image = encrypted_image_array.copy()
+        height, width, channels = encrypted_image_array.shape
+
+        for i in range(height):
+            for j in range(width):
+                for channel in range(channels):
+                    encrypted_pixel_value = encrypted_image_array[i, j, channel]
+                    decrypted_pixel = encrypted_pixel_value ^ key[i * width + j]
+                    decrypted_image[i, j, channel] = int(decrypted_pixel)
+
+        decrypted_image = Image.fromarray(decrypted_image)
+        return decrypted_image

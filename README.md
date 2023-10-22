@@ -72,7 +72,7 @@ python3 ImageToImageDecryption.py
 
 - Need to design frontend.
 - Add new features like videos to text, text to audio, image to audio, text to image, etc
-
+- Encrypting specific parts of the images/videos
 
 
 # Current Issues

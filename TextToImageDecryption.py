@@ -31,7 +31,7 @@ class ImageDecryptor:
                     array_index += 1
 
         image = Image.fromarray(image_array)
-        image.save('decrypted_image_from_text.jpg')
+        image.save('decrypted_image_from_text.png')
 
 def main():
     key = '1f6332526198f90e0b21b831948772ce'

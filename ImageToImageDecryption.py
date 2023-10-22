@@ -2,23 +2,26 @@ from PIL import Image
 import numpy as np
 import random
 from math import log
-from EncryptionDecryptionAlgorithm import ArnoldCat
+from EncryptionDecryptionAlgorithm import ArnoldCat, LogisticMap
 
 class ImageDecryptor:
-    def __init__(self, key):
-        self.key = key
+    def __init__(self, seed):
+        self.seed = seed
         
     def decrypt(self, image):
-        arnoldcatdecrypt = ArnoldCat(self.key)
-        img = arnoldcatdecrypt.ArnoldCatDecryption(image)
-        return img
+        img = Image.open(image)
+        img_array = np.array(img)
+        n = img_array.shape[0] * img_array.shape[1] * img_array.shape[2]
+        
+        logisticmap = LogisticMap(self.seed)
+        key = logisticmap.generate_key(n)
+        decrypted_image = logisticmap.decrypt_image(image, key)
+        decrypted_image.save('decrypted_image_from_image.png')
     
 def main():
-    key = 100
-    decryptor = ImageDecryptor(key)
-    img = decryptor.decrypt('encrypted_image.jpg')
-    img = Image.fromarray(img)
-    img.save('decrypted_image_from_image.jpg')
-    
+    seed = 0.4
+    decryptor = ImageDecryptor(seed)
+    decryptor.decrypt('decrypted_image_from_text.png')
+        
 if __name__ == '__main__':
     main()

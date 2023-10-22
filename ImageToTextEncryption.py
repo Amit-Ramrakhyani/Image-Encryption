@@ -6,17 +6,8 @@ class ImageEncryptor:
     def __init__(self, key):
         self.key = key
 
-    def resize_image(self, image_path, width=256, height=256):
-        image = Image.open(image_path)
-        width_, height_ = image.size
-        print(width_, height_)
-        resized_image = image.resize((width, height))
-        resized_image.save('resized_image.jpg')
-        return 'resized_image.jpg'
-
     def encrypt_image(self, image_path):
-        resized_image_path = self.resize_image(image_path)
-        image = Image.open(resized_image_path)
+        image = Image.open(image_path)
         image_array = np.array(image)
 
         rows, cols = image_array.shape[0], image_array.shape[1]
@@ -39,7 +30,7 @@ class ImageEncryptor:
 def main():
     key = '1f6332526198f90e0b21b831948772ce'
     encryptor = ImageEncryptor(key)
-    encrypted_image = encryptor.encrypt_image('image1.jpg')
+    encrypted_image = encryptor.encrypt_image('encrypted_image_from_image.png')
     with open('encrypted_text.txt', 'w') as f:
         f.write(encrypted_image)
 
