@@ -40,6 +40,12 @@ pip install -r requirements.txt
 
 ## Executing the program
 
+- Use the following command in the command prompt to *input and resize the image*:
+
+```
+python3 resize_image.py
+```
+
 - Use the following command in the command prompt to *encrypt image to image*:
 
 ```
