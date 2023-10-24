@@ -28,8 +28,8 @@ The logistic map uses a nonlinear difference equation to look at discrete time s
 
 The basic formula is: X<sub>t+1</sub> = r * X<sub>t</sub> * (1 - X<sub>t</sub>)
 
-- the initial seed value **seed** is set for generating the key array.
-- the parameter **r** represents the chaotic behaviour. Changing **r** cna change choatic behaviour.
+- the initial seed value **Seed** is set for generating the key array.
+- the parameter **r** represents the chaotic behaviour. Changing **r** can change choatic behaviour.
 
 Then, the elements of key array are XORed with each pixel values of the image in order to get the encrypted image. This same process can be done at the receiver end to decrypt the image.
 
@@ -100,17 +100,15 @@ cd Image-Encryption
 * Create a virtual environment :
   
 ```bash
-# Let's install virtualenv first
 pip install virtualenv
 
-# Then we create our virtual environment
 virtualenv venv
 
 ```
 
 * Activate the virtual environment :
 ```bash
-source venv\scripts\activate
+venv\Scripts\activate
 ```
 
 * Install the requirements :
