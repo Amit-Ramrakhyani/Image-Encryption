@@ -18,10 +18,10 @@ class ImageDecryptor:
         decrypted_image = logisticmap.decrypt_image(image, key)
         decrypted_image.save('decrypted_image_from_image.png')
     
-def main():
+def main(img):
     seed = 0.4
     decryptor = ImageDecryptor(seed)
-    decryptor.decrypt('decrypted_image_from_text.png')
+    decryptor.decrypt(img)
         
-if __name__ == '__main__':
-    main()
+# if __name__ == '__main__':
+#     main()

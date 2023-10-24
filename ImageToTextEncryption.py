@@ -27,12 +27,12 @@ class ImageEncryptor:
         encrypted = cipher.encrypt(text)
         return encrypted
 
-def main():
+def main(imgpth):
     key = '1f6332526198f90e0b21b831948772ce'
     encryptor = ImageEncryptor(key)
-    encrypted_image = encryptor.encrypt_image('encrypted_image_from_image.png')
+    encrypted_image = encryptor.encrypt_image(imgpth)
     with open('encrypted_text.txt', 'w') as f:
         f.write(encrypted_image)
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()

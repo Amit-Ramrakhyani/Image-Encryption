@@ -32,15 +32,18 @@ class ImageDecryptor:
 
         image = Image.fromarray(image_array)
         image.save('decrypted_image_from_text.png')
+        return 'decrypted_image_from_text.png'
 
-def main():
+def main(txtfile):
     key = '1f6332526198f90e0b21b831948772ce'
     
-    with open('encrypted_text.txt', 'r') as f:
+    with open(txtfile, 'r') as f:
         cipher_text = f.read()
     
     decryptor = ImageDecryptor(key)
-    decryptor.decrypt_image(cipher_text)
-
-if __name__ == "__main__":
-    main()
+    img = decryptor.decrypt_image(cipher_text)
+    return img
+    
+    
+# if __name__ == "__main__":
+#     main()

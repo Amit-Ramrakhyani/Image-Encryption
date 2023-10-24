@@ -17,12 +17,13 @@ class ImageEncryptor:
         key = logisticmap.generate_key(n)
         encrypted_image = logisticmap.encrypt_image(image, key)
         encrypted_image.save('encrypted_image_from_image.png')
+        return 'encrypted_image_from_image.png'
     
-def main():
+def main(imagePath):
     seed = 0.4
     encryptor = ImageEncryptor(seed)
-    encryptor.encrypt('resized_image.png')
-    
+    img = encryptor.encrypt(imagePath)
+    return img
 
-if __name__ == '__main__':
-    main()
+# if __name__ == '__main__':
+#     main()
