@@ -2,6 +2,17 @@
 
 This is a project in cryptography that involves implementing image encryption, first encrypting images using chaotic maps (logistic maps) and then encrypting the image to text using AES Encryption.
 
+# Basic Flow
+
+- Encryption
+
+![Alt text](E2E-Page-2.drawio-1.png)
+
+- Decryption
+
+![Alt text](E2E-Page-1.drawio-1.png)
+
+
 ## Image To Image Encryption & Decryption
 
 ### What are chaos maps?
@@ -149,14 +160,9 @@ python3 TextToImageEncryption.py
 python3 ImageToImageDecryption.py
 ```
 
-# Basic Flow
-
-
-
 
 # Future Scopes and updates
 
-- Need to design frontend.
 - Add new features like videos to text, text to audio, image to audio, text to image, etc
 - Encrypting specific parts of the images/videos
 
