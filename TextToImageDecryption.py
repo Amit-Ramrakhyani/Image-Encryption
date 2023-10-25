@@ -41,8 +41,7 @@ def main(txtfile):
         cipher_text = f.read()
     
     decryptor = ImageDecryptor(key)
-    img = decryptor.decrypt_image(cipher_text)
-    return img
+    return decryptor.decrypt_image(cipher_text)
     
     
 # if __name__ == "__main__":

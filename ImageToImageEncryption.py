@@ -22,8 +22,7 @@ class ImageEncryptor:
 def main(imagePath):
     seed = 0.4
     encryptor = ImageEncryptor(seed)
-    img = encryptor.encrypt(imagePath)
-    return img
+    return encryptor.encrypt(imagePath)
 
 # if __name__ == '__main__':
 #     main()
