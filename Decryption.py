@@ -1,9 +1,9 @@
 import ImageToImageDecryption
 import TextToImageDecryption
 
-text_file = 'encrypted_text.txt'
+# text_file = 'encrypted_text.txt'
 
-def main():
+def main(text_file):
     decrypted_text = TextToImageDecryption.main(text_file)
     ImageToImageDecryption.main(decrypted_text)
     
