@@ -10,7 +10,7 @@ This is a project in cryptography that involves implementing image encryption, f
 
 - Decryption
 
-![Alt text](data/readme/E2E-Page-1.drawio-1.png)
+![Alt text](data/readme/E2E-Page-1.drawio.png)
 
 
 ## Image To Image Encryption & Decryption
