@@ -2,3 +2,4 @@ pycryptodome
 numpy
 Pillow
 opencv-python
+streamlit

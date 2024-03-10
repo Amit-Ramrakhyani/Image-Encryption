@@ -2,7 +2,7 @@ import ImageToImageEncryption
 import ImageToTextEncryption
 import resize_image
 
-image = 'image1.jpg'
+image = './data/image1.jpg'
 
 def main():
     resized = resize_image.main(image)

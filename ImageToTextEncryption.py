@@ -31,7 +31,7 @@ def main(imgpth):
     key = '1f6332526198f90e0b21b831948772ce'
     encryptor = ImageEncryptor(key)
     encrypted_image = encryptor.encrypt_image(imgpth)
-    with open('encrypted_text.txt', 'w') as f:
+    with open('./data/encrypted_text.txt', 'w') as f:
         f.write(encrypted_image)
 
 # if __name__ == "__main__":

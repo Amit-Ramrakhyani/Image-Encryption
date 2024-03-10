@@ -16,7 +16,7 @@ class ImageDecryptor:
         logisticmap = LogisticMap(self.seed)
         key = logisticmap.generate_key(n)
         decrypted_image = logisticmap.decrypt_image(image, key)
-        decrypted_image.save('decrypted_image_from_image.png')
+        decrypted_image.save('./data/decrypted_image_from_image.png')
     
 def main(img):
     seed = 0.4
