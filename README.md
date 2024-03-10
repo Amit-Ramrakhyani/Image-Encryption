@@ -6,11 +6,11 @@ This is a project in cryptography that involves implementing image encryption, f
 
 - Encryption
 
-![Alt text](E2E-Page-2.drawio-1.png)
+![Alt text](data/readme/E2E-Page-1.drawio.png)
 
 - Decryption
 
-![Alt text](E2E-Page-1.drawio-1.png)
+![Alt text](data/readme/E2E-Page-1.drawio-1.png)
 
 
 ## Image To Image Encryption & Decryption
@@ -79,7 +79,7 @@ For image encryption, two techniques are used. The first one converts the image 
 
 2. Then the encoding data is encrypted using symmetric type encryption algorithm (an AES cipher with a key size of 128 bits was used).
    
-![Alt text](figure2.png)
+![Alt text](data/readme/figure2.png)
 
 #### Decryption Algorithm
 
@@ -89,7 +89,7 @@ For image decryption, two techniques are used.
    
 2. Second, the plain text will represent the image data, where it  will  be  decoded  and  converted  into  three  matrixes  that represent  the  RGB  colors  that  make  up the  image.
 
-![Alt text](figure4.png)
+![Alt text](data/readme/figure4.png)
 
 
 # Getting Started
