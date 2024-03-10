@@ -4,3 +4,8 @@ env
 test.py
 temp.py
 key.py
+data/encrypted_text.txt
+data/decrypted_image_from_image.png
+data/decrypted_image_from_text.png
+data/encrypted_image_from_image.png
+data/resized_image.png
