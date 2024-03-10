@@ -13,5 +13,5 @@ def resize_image(image_path, width, height):
 #     resize_image(image_path, width, height)
 
 def main(img):
-    imagePath = resize_image(img, 1000, 1000)
+    imagePath = resize_image(img, 500, 500)
     return imagePath
