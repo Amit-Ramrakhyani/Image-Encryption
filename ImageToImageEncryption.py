@@ -16,8 +16,8 @@ class ImageEncryptor:
         logisticmap = LogisticMap(self.seed)
         key = logisticmap.generate_key(n)
         encrypted_image = logisticmap.encrypt_image(image, key)
-        encrypted_image.save('encrypted_image_from_image.png')
-        return 'encrypted_image_from_image.png'
+        encrypted_image.save('./data/encrypted_image_from_image.png')
+        return './data/encrypted_image_from_image.png'
     
 def main(imagePath):
     seed = 0.4

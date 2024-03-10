@@ -35,11 +35,11 @@ if image:
     button_clicked = st.button("Show Encrypted Image")
     button_clicked1 = st.button("Show Encrypted Text")
     if button_clicked:
-        st.image('encrypted_image_from_image.png')
+        st.image('./data/encrypted_image_from_image.png')
         st.write('Image encrypted successfully')
 
     if button_clicked1:
-        with open('encrypted_text.txt', 'r') as file:
+        with open('./data/encrypted_text.txt', 'r') as file:
             data = file.read()
             st.write(data)
 
@@ -51,9 +51,9 @@ button_clicked = st.button("Decrypt Image")
 # Check if the button is clicked
 if button_clicked:
     # run main function from the decryption file
-    decrypt_main('encrypted_text.txt')
+    decrypt_main('./data/encrypted_text.txt')
     # display the decrypted image
-    st.image('decrypted_image_from_image.png')
+    st.image('./data/decrypted_image_from_image.png')
     st.write('Image decrypted successfully')
 
 with st.container():
