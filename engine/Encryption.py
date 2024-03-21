@@ -1,6 +1,6 @@
-import ImageToImageEncryption
-import ImageToTextEncryption
-import resize_image
+import engine.ImageToImageEncryption as ImageToImageEncryption
+import engine.ImageToTextEncryption as ImageToTextEncryption
+import engine.resize_image as resize_image
 
 image = './data/image1.jpg'
 

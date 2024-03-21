@@ -2,7 +2,7 @@ from PIL import Image
 import numpy as np
 import random
 from math import log
-from EncryptionDecryptionAlgorithm import LogisticMap
+from engine.EncryptionDecryptionAlgorithm import LogisticMap
 
 class ImageEncryptor:
     def __init__(self, seed):

@@ -1,8 +1,8 @@
 import streamlit as st
 import requests
 from streamlit_lottie import st_lottie
-from Encryption import main as encrypt_main
-from Decryption import main as decrypt_main
+from engine.Encryption import main as encrypt_main
+from engine.Decryption import main as decrypt_main
 
 st.markdown(
         """

@@ -1,6 +1,6 @@
 import numpy as np
 from PIL import Image
-from EncryptionDecryptionAlgorithm import AESCipher
+from engine.EncryptionDecryptionAlgorithm import AESCipher
 
 class ImageEncryptor:
     def __init__(self, key):

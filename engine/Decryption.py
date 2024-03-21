@@ -1,5 +1,5 @@
-import ImageToImageDecryption
-import TextToImageDecryption
+import engine.ImageToImageDecryption as ImageToImageDecryption
+import engine.TextToImageDecryption as TextToImageDecryption
 
 text_file = './data/encrypted_text.txt'
 
