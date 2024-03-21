@@ -171,7 +171,7 @@ python3 ImageToImageDecryption.py
 
 # References
 
-<a href='https://www.researchgate.net/publication/360251627_IMGTXT_Image_to_Text_Encryption_Based_on_Encoding_Pixel_Contrasts'>Seerwan Waleed Jirjees. Farah F. Alkhalid.(2022) IMGTXT: Image to Text Encryption Based on Encoding Pixel Contrasts</a>
+<a href='https://www.researchgate.net/publication/360251627_IMGTXT_Image_to_Text_Encryption_Based_on_Encoding_Pixel_Contrasts'>Jirjees, Seerwan & Alkhalid, Farah. (2022). IMGTXT: Image to Text Encryption Based on Encoding Pixel Contrasts. Mathematical Modelling of Engineering Problems. 9. 539-544. 10.18280/mmep.090233.</a>
 
 <a href='https://www.jcscm.net/fp/32.pdf'>Kamal Jadidy Aval, Morteza Sabery Kamarposhty, Masumeh Damrudi(2013). A Simple Method for Image Encryption Using Chaotic Logistic Map</a>
 
